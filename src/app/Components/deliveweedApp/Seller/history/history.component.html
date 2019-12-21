@@ -1,0 +1,22 @@
+<div class="list-items-main-container">
+    <h2>Historique des ventes</h2>    
+    
+      <div class="card-horizontal" *ngFor="let item of historySale">
+        <div class="card-image">
+          <img src="{{ item.imageUrl }}" />
+        </div>
+  
+        <div class="card-stacked">
+          <div class="card-content">
+            <h3>{{ item.name }} {{ item.prix }} euros</h3>
+            <p>{{ item.description }}</p>
+          </div>
+          <div class="card-action">
+            <span>Vendu a  : </span><span>{{item.customerUsername}}</span>
+          </div>
+        </div>
+      </div>
+    
+</div>
+
+<app-navbar></app-navbar>

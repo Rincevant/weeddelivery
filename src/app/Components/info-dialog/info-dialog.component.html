@@ -1,0 +1,23 @@
+<div *ngIf="visible; then visibleBlock; else notVisibleBlock"></div>
+
+<ng-template #visibleBlock>
+  <div class="dialog-main-container dialogVisible">
+    <div *ngIf="errorDialog; then errorText; else infoText"></div>
+  </div>
+</ng-template>
+
+<ng-template #notVisibleBlock>
+  <div class="dialog-main-container"></div>
+</ng-template>
+
+<ng-template #infoText>
+  <div>
+    <p class="dialogInfo">{{ text }}</p>
+  </div>
+</ng-template>
+
+<ng-template #errorText>
+  <div>
+    <p class="dialogError">{{ text }}</p>
+  </div>
+</ng-template>

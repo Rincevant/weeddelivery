@@ -1,0 +1,28 @@
+.dialogError {
+  color: red;
+  margin: auto;
+  text-align: center;
+  line-height: 40px;
+}
+
+.dialogInfo {
+  color: blue;
+  margin: auto;
+  text-align: center;
+  line-height: 40px;
+}
+
+.dialog-main-container {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 35%;
+  width: 30%;
+  height: 40px;
+  background-color: whitesmoke;
+  border-radius: 1rem;
+}
+
+.dialogVisible {
+  display: inline-block;
+}

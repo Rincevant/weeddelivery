@@ -1,0 +1,27 @@
+<div class="shops-main-container">
+  <h2>{{ shopName }}</h2>
+
+  <input mat-input type="text" [(ngModel)]="filter" placeholder="votre recherche..." />
+
+  <div *ngFor="let product of filteredProducts" class="card-main-container">
+    <div class="card-image-container">
+      <img mat-card-image src="{{ product.picture }}" alt="Photo of a weed" class="card-image" />
+    </div>
+    <div class="card-product-container">
+      <div class="card-title-container">
+        <mat-card-title class="card-title">{{ product.name }}</mat-card-title>
+        <div class="card-text">{{ product.price }}€</div>
+      </div>
+      <div class="card-desc-container">
+        <div class="card-desc">
+          <p>{{ product.description }}</p>
+        </div>
+        <div class="card-add-button">
+          <button mat-icon-button aria-label="See shop">
+            <mat-icon>add</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="home-screen-main-container">
+  <h2>Shops</h2>
+
+  <input mat-input type="text" [(ngModel)]="shopFilter" />
+
+  <div *ngFor="let shop of allNextShops" class="card-main-container">
+    <mat-card class="example-card">
+      <img mat-card-image src="{{ shop.picture }}" alt="Photo of a Shiba Inu" class="card-image" />
+      <div class="card-bottom-container">
+        <div class="card-title-container">
+          <mat-card-title class="card-text">{{ shop.name }}</mat-card-title>
+          <mat-card-subtitle class="card-text">{{ shop.address }}</mat-card-subtitle>
+          <mat-card-subtitle class="card-text">Distance : {{ shop.distance }} km</mat-card-subtitle>
+        </div>
+        <a routerLink="/Shops/{{ shop.id }}" class="card-icon">
+          <button mat-icon-button aria-label="See shop">
+            <mat-icon>arrow_forward</mat-icon>
+          </button>
+        </a>
+      </div>
+    </mat-card>
+  </div>
+</div>
+<app-navbar></app-navbar>

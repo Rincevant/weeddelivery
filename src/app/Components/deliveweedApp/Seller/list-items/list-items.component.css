@@ -1,0 +1,49 @@
+.list-items-main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 35%;
+  margin-right: 35%;
+  overflow-y: scroll;
+  height: calc(98vh - 110px);
+}
+
+h2 {
+  text-align: center;
+}
+
+.card-horizontal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+.card-image > img {
+  width: 100px;
+  height: 100px;
+}
+
+.card-stacked {
+  width: 100%;
+  margin-left: 15px;
+}
+
+.buttonAchat {
+  background-color: #c64d45;
+  padding: 10px;
+  font-size: 1.2em;
+  color: white;
+  border-radius: 0.1rem;
+  margin-top: 20px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  width: 100%;
+}

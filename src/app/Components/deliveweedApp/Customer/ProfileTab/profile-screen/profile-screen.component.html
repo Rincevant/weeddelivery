@@ -1,0 +1,70 @@
+<div id="inscriptionScreen">
+  <div *ngIf="state == 1" class="infoProfile">
+    <div id="inscriptionContent">
+      <h2 style="text-align: center; color: white;">PROFILE MODIFICATION</h2>
+      <div id="formInscription">
+        <div id="userName">
+          <img src="../../../../assets/user.png" alt="user" />
+          <input name="userName" placeholder="Utilisateur" [(ngModel)]="user.userName" />
+        </div>
+        <div id="email">
+          <img src="../../../../assets/mail.png" alt="mail" />
+          <input name="email" placeholder="Email" [(ngModel)]="user.email" />
+        </div>
+        <div id="status">
+          <img src="../../../../assets/delivery.png" alt="status" />
+          <select [(ngModel)]="user.roles[0]">
+            <option value="Customer">Customer</option>
+            <option value="Seller">Seller</option>
+            <option value="Deliver">Deliver</option>
+          </select>
+        </div>
+        <div class="buttonConnexion" (click)="save()">Sauvegarder</div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="state == 0 && userDataAvaible" class="infoProfile">
+    <div id="inscriptionContent">
+      <h2 style="text-align: center; color: white;">PROFILE UTILISATEUR</h2>
+      <div id="formInscription">
+        <div id="userName" class="userinfo">
+          <img src="../../../../assets/user.png" alt="user" />
+          <p>{{ user.userName }}</p>
+        </div>
+        <div id="email" class="userinfo">
+          <img src="../../../../assets/mail.png" alt="mail" />
+          <p>{{ user.email }}</p>
+        </div>
+        <div id="status" class="userinfo">
+          <img src="../../../../assets/delivery.png" alt="status" />
+          <span>{{ user.roles[0] }}</span>
+        </div>
+        <div class="buttonConnexion" (click)="setState(1)">modifier</div>
+        <div class="buttonConnexion" (click)="setState(2)">Créer un magasin</div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="state == 2" class="infoProfile">
+    <div id="inscriptionContent">
+      <h2 style="text-align: center; color: white;">CREER UN MAGASIN</h2>
+      <div id="formInscription">
+        <div id="shopName">
+          <img src="../../../../assets/user.png" alt="name" /> <input name="shopName" placeholder="Nom" [(ngModel)]="shopName" />
+        </div>
+        <div id="shopAddress">
+          <img src="../../../../assets/mail.png" alt="adress" />
+          <input name="shopAddress" placeholder="address" [(ngModel)]="shopAddress" />
+        </div>
+        <div id="imgShop">
+          <span style="font-size: 1.3em; color: white; text-align: center; margin-bottom: 15px;">Image du magasin : </span>
+          <input type="file" id="filePicker" (change)="handleFileSelect($event)" />
+        </div>
+      </div>
+      <div class="buttonConnexion" (click)="setState(0)">Annuler</div>
+      <div class="buttonConnexion" (click)="registerShop()">Enregistrer</div>
+    </div>
+  </div>
+</div>
+<app-navbar></app-navbar>

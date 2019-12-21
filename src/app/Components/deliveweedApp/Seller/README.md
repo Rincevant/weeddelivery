@@ -1,0 +1,1 @@
+Seller components folder

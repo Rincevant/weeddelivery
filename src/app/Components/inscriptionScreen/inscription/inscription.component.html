@@ -1,0 +1,27 @@
+<div id="inscriptionScreen">
+  <div id="inscriptionContent">
+    <img src="../../../../assets/weed.png" alt="weed" />
+    <div id="formInscription">
+      <div id="userName">
+        <img src="../../../../assets/user.png" alt="user" /> <input name="userName" placeholder="votre nom..." [(ngModel)]="userName" />
+      </div>
+      <div id="email">
+        <img src="../../../../assets/mail.png" alt="mail" /> <input name="email" placeholder="votre email..." [(ngModel)]="email" />
+      </div>
+      <div id="password">
+        <img src="../../../../assets/password.png" alt="password" />
+        <input name="password" placeholder="votre mot de passe..." type="password" [(ngModel)]="password" />
+      </div>
+      <div id="status">
+        <img src="../../../../assets/delivery.png" alt="status" />
+        <select [(ngModel)]="status">
+          <option>Customer</option>
+          <option>Seller</option>
+          <option>Deliver</option>
+        </select>
+      </div>
+      <div class="buttonConnexion" (click)="signUp()">Je m'inscris</div>
+    </div>
+  </div>
+  <app-info-dialog [errorDialog]="true" [text]="errorText" [visible]="errorVisible" [fixed]="false"></app-info-dialog>
+</div>

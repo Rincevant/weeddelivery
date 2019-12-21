@@ -1,0 +1,16 @@
+<div id="connexionScreen">
+  <div id="connexionContent">
+    <img src="../../../../assets/weed.png" alt="weed" />
+    <div id="formConnexion">
+      <div id="email">
+        <img src="../../../../assets/user.png" alt="mail" /> <input name="email" placeholder="VOTRE USERNAME" [(ngModel)]="username" />
+      </div>
+      <div id="password">
+        <img src="../../../../assets/password.png" alt="password" />
+        <input name="password" placeholder="VOTRE PASSWORD" type="password" [(ngModel)]="password" />
+      </div>
+      <a routerLink="/Password-recovery" routerLinkActive="active" id="forgotPass">Mot de passe oublié ?</a>
+      <div class="buttonConnexion" (click)="connect()">Connection</div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="list-items-main-container">
+  <h2>Articles</h2>
+  <div routerLink="/AddItem" routerLinkActive="active" class="buttonAchat" style="margin: auto; margin-bottom: 20px; width: 60%;">
+    Ajouter un article
+  </div>
+  <div>
+    <div class="card-horizontal" *ngFor="let item of listItem">
+      <div class="card-image">
+        <img src="{{ item.imageUrl }}" />
+      </div>
+
+      <div class="card-stacked">
+        <div class="card-content">
+          <h3>{{ item.name }} {{ item.prix }} euros</h3>
+          <p>{{ item.description }}</p>
+        </div>
+        <div class="card-action">
+          <a class="buttonAchat">Editer cet article</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<app-navbar></app-navbar>

@@ -1,0 +1,147 @@
+#inscriptionContent {
+  display: flex;
+  width: 30%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+#inscriptionContent > img {
+  width: 50%;
+}
+
+#formInscription {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#userName {
+  display: flex;
+  align-items: center;
+}
+
+#email {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+#password {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+#status #shopName #shopAddress {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+#email > img {
+  width: 60px;
+}
+
+#password > img {
+  width: 60px;
+}
+
+#userName > img {
+  width: 60px;
+}
+
+#status > img {
+  width: 60px;
+}
+
+#connexionContent > img {
+  width: 75%;
+}
+
+.userinfo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.buttonConnexion {
+  background-color: #c64d45;
+  font-size: 1.2em;
+  color: white;
+  border-radius: 0.6rem;
+  margin-top: 20px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+  width: 100%;
+}
+
+input {
+  height: 50px;
+  width: 200px;
+  border-radius: 0.5em;
+}
+
+select {
+  height: 50px;
+  width: 200px;
+  border-radius: 0.5em;
+}
+
+#imgShop {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15px;
+  text-align: center;
+}
+
+.infoProfile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  overflow: hidden;
+  width: 30%;
+  height: 100%;
+  border: 1px solid white;
+  border-radius: 12px;
+}
+
+p {
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+  width: 100%;
+  padding: 10px 5px 10px 5px;
+}
+
+#inscriptionScreen {
+  height: 100%;
+}
+
+#shopName,
+#shopAddress {
+  display: flex;
+}
+
+/*********** MEDIA QUERIES *********/
+
+@media only screen and (min-width: 700px) and (max-width: 1160px) {
+  #inscriptionContent > img {
+    width: 300px;
+  }
+}
+
+@media only screen and (min-width: 500px) and (max-width: 700px) {
+  #inscriptionContent > img {
+    width: 300px;
+  }
+}
+
+@media only screen and (min-width: 315px) and (max-width: 500px) {
+  #inscriptionContent > img {
+    width: 250px;
+  }
+}
