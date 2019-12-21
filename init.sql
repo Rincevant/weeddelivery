@@ -1,8 +1,11 @@
 CREATE TABLE utilisateur(
-
+	pk_utilisateur_id SERIAL PRIMARY KEY,		
+	username VARCHAR(100) NOT NULL,
+	email VARCHAR(100) NOT NULL,
+	pass VARCHAR(100) NOT NULL,	
+	token VARCHAR(300),	
+	register_date DATE
 );
-
-
 
 /**
 		JEU DE DONNEES		
